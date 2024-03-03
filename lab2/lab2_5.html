@@ -7,8 +7,57 @@
 </head>
 
 <body>
-    <form action="#">
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>E-mail</td>
+                <td><input type="email" name="email" placeholder="Введите e-mail" required></td>
+            </tr>
+            <tr>
+                <td>Пароль</td>
+                <td><input type="password" name="password" placeholder="Введите пароль" required></td>
+            </tr>
+            <tr>
+                <td>Пол</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Мужчина</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Женщина</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Год рождения</td>
+                <td>
+                    <select name="birth_year">
+                        <option value="">1981</option>
 
+                    </select>
+                    -ый
+                </td>
+
+            </tr>
+            <tr>
+                <td>Я знаю:</td>
+                <td>
+                    <label><input type="checkbox" name="lang" value="rus"> Русский</label><br>
+                    <label><input type="checkbox" name="lang" value="spanish"> Испанский</label><br>
+                    <label><input type="checkbox" name="lang" value="german"> Немецкий</label><br>
+                    <label><input type="checkbox" name="lang" value="eng"> Английский</label><br>
+                    <label><input type="checkbox" name="lang" value="chinese"> Китайский</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Обо мне:</td>
+                <td><textarea name="about" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Готово">
+                    <input type="reset" value="Очистить">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 
