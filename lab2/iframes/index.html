@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Организация фреймовой структуры</title>
+    <style>
+        .menu-frame {
+            width: 200px;
+            height: 100%;
+            float: left;
+        }
+
+        .content-frame {
+            width: calc(100% - 210px);
+            height: 100%;
+            float: right;
+        }
+
+        html,
+        body {
+
+            height: 99%;
+        }
+    </style>
+</head>
+
+
+<!-- Не поддерживается в html5 =) -->
+<!-- <frameset cols="200, 800">
+    <frame src="menu.html" name="menu">
+    <frame src="content.html" name="content">
+</frameset> -->
+
+<body>
+    <iframe class="menu-frame" src="menu.html" name="menu"></iframe>
+    <iframe class="content-frame" src="content.html" name="content"></iframe>
+</body>
+
+</html>
