@@ -1,48 +1,61 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+
+    /* background-color: #f2f2f2; */
+    background-image: url('../img/foggy-shad.jpg');
+    background-repeat: repeat;
 
     padding-top: 50px;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #71ffa8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size:xxx-large;
 }
 
 hr {
     border: none;
-    border-top: 2px solid #333;
+    border-top: 2px solid #71ffa77e;
     width: 60%;
 
     margin-top: 15px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
-ol {
+
+ul {
+    text-align: center;
+    list-style: none;
     width: 50%;
-    margin: 0 auto;
+
+
+    /* margin: 0 auto; */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 330px;
 }
 
-ol li {
+
+ul li {
     margin-bottom: 10px;
+
+    font-weight: 800;
+    font-size:x-large;
 }
 
 a {
     text-decoration: none;
-    color: #007bff;
+
+    color: #bbeeff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     transition: color 0.3s ease;
 }
 
-a:active {
-    color: #0056b3;
+a:hover {
+    color: #60bfff;
 }
-
-a:visited {
-    color: #954cc9;
-}
-
-/* based on my lab3 nav page */
