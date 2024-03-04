@@ -14,7 +14,7 @@ body {
 
 h1,
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
     text-align: right;
     color: red;
 }
@@ -26,4 +26,8 @@ p {
 em {
     color: green;
     font-weight: bold;
+}
+
+strong {
+    font-family: 'Caveat';
 }
