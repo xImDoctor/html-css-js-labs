@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Оформление вертикального меню</title>
+
+    <!-- connect font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         html {
             background: #f0f0f0;
@@ -29,13 +33,14 @@
         }
 
         .menu li::before {
-            content: '';
+            content: '\f146';
+            font-family: FontAwesome;
             width: 16px;
             height: 16px;
             position: absolute;
-            background: url("src/css_sprites.png") no-repeat -10px -10px;
+            /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
             left: 10px;
-        
+
         }
 
         .menu li li {
@@ -44,12 +49,13 @@
         }
 
         .menu li li::before {
-            content: '';
+            content: '\f192';
+            font-family: FontAwesome;
             width: 16px;
             height: 16px;
             position: absolute;
-            background: url("src/css_sprites.png") no-repeat -10px -46px;
-           
+            /* background: url("src/css_sprites.png") no-repeat -10px -46px; */
+
             left: -20px;
         }
 
@@ -61,27 +67,6 @@
 
         .menu li a:hover {
             color: #6092c4;
-        }
-
-       
-
-        /* CSS sprites */
-        .bg-minus {
-            width: 16px;
-            height: 16px;
-            background: url('src/css_sprites.png') -10px -10px;
-        }
-
-        .bg-plus {
-            width: 16px;
-            height: 16px;
-            background: url('src/css_sprites.png') -46px -10px;
-        }
-
-        .bg-point {
-            width: 16px;
-            height: 16px;
-            background: url('src/css_sprites.png') -10px -46px;
         }
 
     </style>
