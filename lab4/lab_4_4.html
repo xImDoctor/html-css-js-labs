@@ -20,15 +20,38 @@
         }
 
         .menu ul {
-            list-style-image: url(src/pic/minus.gif);
+            /* list-style-image: url(src/pic/minus.gif); */
+            list-style-type: none;
             margin-bottom: 10px;
-            
+
             padding-left: 30px;
+            position: relative;
         }
 
-        /* .menu li {
-             padding: 8px 0; 
-        } */
+        .menu li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -10px;
+            left: 10px;
+        
+        }
+
+        .menu li li {
+            margin-left: -10px;
+            position: relative;
+        }
+
+        .menu li li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -46px;
+           
+            left: -20px;
+        }
 
         .menu li a {
             display: block;
@@ -40,15 +63,27 @@
             color: #6092c4;
         }
 
-        .menu li ul {
-            list-style-image: url(src/pic/point.gif);
+       
 
-
+        /* CSS sprites */
+        .bg-minus {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -10px -10px;
         }
 
-        .menu li li {
-            margin-left: -10px;
+        .bg-plus {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -46px -10px;
         }
+
+        .bg-point {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -10px -46px;
+        }
+
     </style>
 </head>
 
