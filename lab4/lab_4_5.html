@@ -33,7 +33,7 @@
         }
 
         .menu li::before {
-            content: '\f147';
+            content: '\f0fe';
             font-family: FontAwesome;
             width: 16px;
             height: 16px;
@@ -46,6 +46,9 @@
         .menu li li {
             margin-left: -10px;
             position: relative;
+
+            display: none;
+            top:0;
         }
 
         .menu li li::before {
@@ -67,6 +70,21 @@
 
         .menu li a:hover {
             color: #6092c4;
+        }
+
+        .menu li:hover li {
+            display:block;
+        }
+
+
+        .menu li:hover::before {
+            content: '\f147';
+            font-family: FontAwesome;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
+            left: 10px;
         }
 
     </style>
