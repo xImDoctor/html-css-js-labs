@@ -21,10 +21,35 @@
 
         .menu ul {
             /* list-style-image: url(src/pic/minus.gif); */
-            /* list-style-type: none; */
+            list-style-type: none;
             margin-bottom: 10px;
 
             padding-left: 30px;
+            position: relative;
+        }
+
+        .menu li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -10px;
+            left: 10px;
+        
+        }
+
+        .menu li li {
+            margin-left: -10px;
+            position: relative;
+        }
+
+        menu li li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -46px;
+           
         }
 
         .menu li a {
@@ -37,9 +62,7 @@
             color: #6092c4;
         }
 
-        .menu li li {
-            /* margin-left: -10px; */
-        }
+       
 
         /* CSS sprites */
         .bg-minus {
@@ -59,8 +82,6 @@
             height: 16px;
             background: url('src/css_sprites.png') -10px -46px;
         }
-
-
 
     </style>
 </head>
