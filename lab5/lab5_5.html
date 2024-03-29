@@ -7,18 +7,15 @@
     <style type="text/css">
         
         .container {
-            display: flex;
-            justify-content: space-around;  /* space-between? */
-            align-content: flex-start;
-            /* flex-direction: row; */
-            flex-flow: nowrap row;
+            display: grid;
+            grid-template-columns: 200px 600px 200px;
+            grid-gap: 10px;
+            justify-content: center; /* space-between */
         }
         
         #left,
         #right,
         #center {
-            /* display: inline-block;
-            vertical-align: top; */
             flex: 0 auto;
             box-sizing: border-box;
 
@@ -26,21 +23,21 @@
 
         #left {
             background: #ccf;
-            width: 200px;
+            /* width: 200px; */
 
             order: 1;
         }
 
         #right {
             background: #fcc;
-            width: 200px;
+            /* width: 200px; */
 
             order: 3;
         }
 
         #center {
             background: #cfc;
-            width: 600px;
+            /* width: 600px; */
 
             order: 2;
         }
