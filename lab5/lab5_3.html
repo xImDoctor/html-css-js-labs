@@ -5,27 +5,38 @@
     <meta charset="utf-8">
     <title>Использование float при построении колонок</title>
     <style type="text/css">
+        #left,
+        #right,
+        #center {
+            display: inline-block;
+            vertical-align: top;
+
+            box-sizing: border-box;
+
+        }
+
         #left {
             background: #ccf;
             width: 200px;
-            float: left;
-            box-sizing: border-box;
-            margin-right: 10px;
+
+            /* float: left; */
+            /* margin-right: 10px; */
         }
 
         #right {
             background: #fcc;
             width: 200px;
-            float: right;
-            box-sizing: border-box;
-            margin-left: 10px;
+
+            /* float: right; */
+            /* margin-left: 10px; */
         }
 
         #center {
             background: #cfc;
-            box-sizing: border-box;
-            /* мастхэвно чинит float */
-            overflow: hidden;
+            width: 600px;
+
+
+            /* overflow: hidden; */
 
         }
     </style>
@@ -33,7 +44,6 @@
 
 <body>
     <div id="left">left<br>left<br>left<br>left<br>left</div>
-    <div id="right">right<br>right<br>right<br>right</div>
     <div id="center">center text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
@@ -48,6 +58,7 @@
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text text text text text text text text
         text text text text text text text text text text text text text text text</div>
+    <div id="right">right<br>right<br>right<br>right</div>
 </body>
 
 </html>
