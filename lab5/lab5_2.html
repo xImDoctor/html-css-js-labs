@@ -7,14 +7,26 @@
     <style type="text/css">
         #left {
             background: #ccf;
+            width: 200px;
+            float: left;
+            box-sizing: border-box;
+            margin-right: 10px;
         }
 
         #right {
             background: #fcc;
+            width: 200px;
+            float: right;
+            box-sizing: border-box;
+            margin-left: 10px; 
         }
 
         #center {
             background: #cfc;
+            box-sizing: border-box;
+            /* мастхэвно чинит float */
+            overflow: hidden;
+
         }
     </style>
 </head>
@@ -39,3 +51,4 @@
 </body>
 
 </html>
+
