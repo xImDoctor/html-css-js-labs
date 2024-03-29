@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Использование float при построении колонок</title>
+    <style type="text/css">
+        
+        .container {
+            display: grid;
+            grid-template-columns: 200px 600px 200px;
+            grid-gap: 10px;
+            justify-content: space-between; /* center */
+        }
+        
+        #left,
+        #right,
+        #center {
+            flex: 0 auto;
+            box-sizing: border-box;
+
+        }
+
+        #left {
+            background: #ccf;
+            /* width: 200px; */
+
+            order: 1;
+        }
+
+        #right {
+            background: #fcc;
+            /* width: 200px; */
+
+            order: 3;
+        }
+
+        #center {
+            background: #cfc;
+            /* width: 600px; */
+
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="right">right<br>right<br>right<br>right</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text</div>
+    </div>
+</body>
+
+</html>
