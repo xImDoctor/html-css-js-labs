@@ -6,7 +6,10 @@
     <title>Оформление вертикального меню</title>
 
     <!-- connect font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 2
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         html {
@@ -33,14 +36,14 @@
         }
 
         .menu li::before {
-            content: '\f0fe';
+            content: '\f196'; /* \'f0fe' */
             font-family: FontAwesome;
             width: 16px;
             height: 16px;
             position: absolute;
             /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
             left: 10px;
-            
+
         }
 
         .menu li li {
@@ -48,10 +51,11 @@
             position: relative;
 
             display: none;
-            top:0;
+            top: 0;
         }
 
-        .menu li li::before, .menu li li:hover::before {
+        .menu li li::before,
+        .menu li li:hover::before {
             content: '\f192';
             font-family: FontAwesome;
             width: 16px;
@@ -73,11 +77,11 @@
         }
 
         .menu li:hover li {
-            display:block;
+            display: block;
         }
 
 
-        .menu li:hover::before{
+        .menu li:hover::before {
             content: '\f147';
             font-family: FontAwesome;
             width: 16px;
@@ -86,7 +90,6 @@
             /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
             left: 10px;
         }
-
     </style>
 </head>
 
