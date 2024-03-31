@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Использование inline-block при построении колонок</title>
-    
+
     <style>
+        .wrap {
+            min-width: 1040px;
+        }
+
         #left,
         #right,
         #center {
@@ -37,30 +41,42 @@
             background: #cfc;
             width: 600px;
 
-
-            /* overflow: hidden; */
-
         }
     </style>
 </head>
 
 <body>
-    <div id="left">left<br>left<br>left<br>left<br>left</div>
-    <div id="center">center text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text</div>
-    <div id="right">right<br>right<br>right<br>right</div>
+    <div class="wrap">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text 
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text</div>
+        <div id="right">right<br>right<br>right<br>right</div>
+    </div>
 </body>
 
 </html>
