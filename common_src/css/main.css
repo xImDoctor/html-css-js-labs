@@ -32,7 +32,7 @@ hr {
 }
 
 .container li::marker {
-    color: #bbeeff; 
+    color: #bbeeff;
     margin-right: 10px;
 }
 
