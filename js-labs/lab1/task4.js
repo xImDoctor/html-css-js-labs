@@ -16,9 +16,9 @@ let printSimple = function (n) {
 
 }
 
-let n;
-do
-    n = parseInt(prompt("Введите целое число >1: "));
-while (isNaN(n) || n < 1);
+let n = parseInt(prompt("Введите целое число >1: "));
 
-printSimple(n);
+if (!isNaN(n) && n > 1)
+    printSimple(n);
+else alert("Введено некорректное число.")
+
