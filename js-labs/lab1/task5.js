@@ -1,3 +1,5 @@
+'use strict';
+
 let generateTable = function(rows) {
     const animals = ['dog', 'dog', 'dog', 'cat', 'cat'];
     
