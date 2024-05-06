@@ -36,9 +36,14 @@ console.log(sumTo(100)); // 5050
  * @param {number} year год, который нужно проверить, натуральное число
  * @return {boolean} true, если год високосный, иначе - false.
  */
-function isLeap(year) {
+function isLeapYear(year) {
   return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
 }
+
+console.log(isLeapYear(2024)); //true
+console.log(isLeapYear(2025)); //false
+console.log(isLeapYear(2000)); //true
+console.log(isLeapYear(1900)); //false
 
 
 /**
@@ -82,13 +87,13 @@ console.log(fib(100)); // 354224848179261915075n
  * 
  * @param {number} x первый аргумент
  * @param {number} y второй аргумент
- * @return {function} true, если y больше x;
+ * @return {Function} true, если y больше x;
  * false, если y меньше x;
  * null, если значения равны.
  */
 function compare(x) {
   return function (y) {
-    y > x ? true : y < x ? false : null;
+    return y > x ? true : y < x ? false : null;
   };
 }
 
