@@ -61,7 +61,7 @@ console.log(factorial(5)); // 120n
  * Возвращает n-ое число Фибоначчи.
  *
  * @param {number} n номер искомого числа Фибоначчи
- * @return {number} n-oe число Фибоначчи
+ * @return {BigInt} n-oe число Фибоначчи
  */
 function fib(n) {
   let a = 0n;
@@ -77,19 +77,18 @@ function fib(n) {
 console.log(fib(0));   // 0n
 console.log(fib(100)); // 354224848179261915075n
 
-// Функция compare(x), возвращающая функцию для сравнения
 /**
- * Возвращает x, возведённое в n-ную степень.
- *
- * @param {number} x Возводимое в степень число.
- * @param {number} n Степень, должна быть натуральным числом.
- * @return {number} x, возведённое в n-ную степень.
+ *  * Возвращает результат сравнения целых чисел y и x.
+ * 
+ * @param {number} x первый аргумент
+ * @param {number} y второй аргумент
+ * @return {function} true, если y больше x;
+ * false, если y меньше x;
+ * null, если значения равны.
  */
 function compare(x) {
   return function (y) {
-    if (y > x) return true;
-    if (y < x) return false;
-    return null;
+    y > x ? true : y < x ? false : null;
   };
 }
 
@@ -97,7 +96,12 @@ console.log(compare(5)(4)); // false
 console.log(compare(5)(5)); // null
 console.log(compare(5)(6)); // true
 
-// Функция sum(...), возвращающая сумму всех аргументов
+/**
+ * Возвращает сумму всех аргументов.
+ *
+ * @param {...number} args - Аргументы для суммирования.
+ * @return {number} - Сумма всех аргументов.
+ */
 function sum(...args) {
   return args.reduce((acc, curr) => acc + curr, 0);
 }
