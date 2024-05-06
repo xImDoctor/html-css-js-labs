@@ -13,9 +13,9 @@ function pow(x, n) {
   return x * pow(x, n - 1);
 }
 
-console.log(pow(2, 2));  // 4
-console.log(pow(2, 0));  // 1
-console.log(pow(2, -2)); // 0.25
+// console.log(pow(2, 2));  // 4
+// console.log(pow(2, 0));  // 1
+// console.log(pow(2, -2)); // 0.25
 
 /**
 * Возвращает сумму чисел от 1 до n,
@@ -28,7 +28,7 @@ function sumTo(n) {
   return (n * (n + 1)) / 2;
 }
 
-console.log(sumTo(100)); // 5050
+// console.log(sumTo(100)); // 5050
 
 
 
@@ -42,10 +42,10 @@ function isLeapYear(year) {
   return (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
 }
 
-console.log(isLeapYear(2024)); //true
-console.log(isLeapYear(2025)); //false
-console.log(isLeapYear(2000)); //true
-console.log(isLeapYear(1900)); //false
+// console.log(isLeapYear(2024)); //true
+// console.log(isLeapYear(2025)); //false
+// console.log(isLeapYear(2000)); //true
+// console.log(isLeapYear(1900)); //false
 
 
 /**
@@ -60,8 +60,8 @@ function factorial(n) {
   return BigInt(n) * factorial(n - 1);
 }
 
-console.log(factorial(0)); // 1n
-console.log(factorial(5)); // 120n
+// console.log(factorial(0)); // 1n
+// console.log(factorial(5)); // 120n
 
 // Функция fib(n), возвращающая n-е число Фибоначчи
 /**
@@ -99,9 +99,10 @@ function compare(x) {
   };
 }
 
-console.log(compare(5)(4)); // false
-console.log(compare(5)(5)); // null
-console.log(compare(5)(6)); // true
+// console.log(compare(5)(4)); // false
+// console.log(compare(5)(5)); // null
+// console.log(compare(5)(6)); // true
+
 
 /**
  * Возвращает сумму всех аргументов.
@@ -113,6 +114,6 @@ function sum(...args) {
   return args.reduce((acc, curr) => acc + curr, 0);
 }
 
-console.log(sum());       // 0
-console.log(sum(1));      // 1
-console.log(sum(1, 2));   // 3
+// console.log(sum());       // 0
+// console.log(sum(1));      // 1
+// console.log(sum(1, 2));   // 3
