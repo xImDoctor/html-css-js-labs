@@ -39,5 +39,12 @@ class Book {
         this.price = value;
     }
     
+    show() {
+        console.log(`Название: ${this.title}, Год публикации: ${this.pubYear}, Стоимость: ${this.price}`);
+    }
 
+
+    static compare(book1, book2) {
+        return book1.pubYear - book2.pubYear;
+    }
 }
