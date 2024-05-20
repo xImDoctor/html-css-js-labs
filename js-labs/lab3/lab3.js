@@ -5,7 +5,7 @@
  * @param {number} num - Число.
  * @returns {number} Дробная часть числа.
  */
-function getDecimal(num) {
+export function getDecimal(num) {
     return Math.abs(num % 1);
 }
 
@@ -15,7 +15,7 @@ function getDecimal(num) {
  * @param {string} url - Адрес сайта.
  * @returns {string} Нормализованный URL.
  */
-function normalizeUrl(url) {
+export function normalizeUrl(url) {
     if (!url.startsWith("http://") && !url.startsWith("https://"))
         return "https://" + url;
 
@@ -28,7 +28,7 @@ function normalizeUrl(url) {
  * @param {string} str - Входная строка.
  * @returns {boolean} true, если строка содержит спам, иначе false.
  */
-function checkSpam(str) {
+export function checkSpam(str) {
     const lowerStr = str.toLowerCase();
     return lowerStr.includes('viagra') || lowerStr.includes('xxx');
 }
@@ -40,7 +40,7 @@ function checkSpam(str) {
  * @param {number} maxlength - Максимальная длина строки.
  * @returns {string} Усеченная строка.
  */
-function truncate(str, maxlength) {
+export function truncate(str, maxlength) {
     if (str.length > maxlength)
         return str.slice(0, maxlength - 1) + "…";
     
@@ -52,7 +52,7 @@ function truncate(str, maxlength) {
  * @param {string} str - Входная строка.
  * @returns {string} Преобразованная строка.
  */
-function camelize(str) {
+export function camelize(str) {
     return str.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('');
 }
 
@@ -61,7 +61,7 @@ function camelize(str) {
  * @param {number} n - Число Фибоначчи.
  * @returns {Array<BigInt>} Массив чисел Фибоначчи.
  */
-function fibs(n) {
+export function fibs(n) {
     const fibArray = [];
     let a = 0n, b = 1n;
     for (let i = 0; i < n; i++)
@@ -76,7 +76,7 @@ function fibs(n) {
  * @param {Array<number>} arr - Входной массив.
  * @returns {Array<number>} Отсортированный массив по убыванию.
  */
-function arrReverseSorted(arr) {
+export function arrReverseSorted(arr) {
     return arr.slice().sort((a, b) => b - a);
 }
 
@@ -87,8 +87,8 @@ function arrReverseSorted(arr) {
  * @param {Array<T>} arr - Входной массив.
  * @returns {Array<T>} Массив уникальных значений.
  */
-function unique(arr) {
+export function unique(arr) {
     return [...new Set(arr)];
 }
 
-module.exports = { getDecimal, normalizeUrl, checkSpam, truncate, camelize, fibs, arrReverseSorted, unique };
+//module.exports = { getDecimal, normalizeUrl, checkSpam, truncate, camelize, fibs, arrReverseSorted, unique };
