@@ -6,7 +6,8 @@
  * @returns {number} Дробная часть числа.
  */
 export function getDecimal(num) {
-    return Math.abs(num % 1);
+
+    return +(num >= 0 ? num % 1 : 1 + (num % 1)).toFixed(2);
 }
 
 
@@ -43,7 +44,7 @@ export function checkSpam(str) {
 export function truncate(str, maxlength) {
     if (str.length > maxlength)
         return str.slice(0, maxlength - 1) + "…";
-    
+
     return str;
 }
 
@@ -53,7 +54,12 @@ export function truncate(str, maxlength) {
  * @returns {string} Преобразованная строка.
  */
 export function camelize(str) {
-    return str.split('-').map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)).join('');
+    return str.split('-').map((word, index) => {
+        if (index === 0)
+            return word;
+
+        return word ? word[0].toUpperCase() + word.slice(1) : '';
+    }).join('');
 }
 
 /**
@@ -63,9 +69,9 @@ export function camelize(str) {
  */
 export function fibs(n) {
     const fibArray = [];
-    let a = 0n, b = 1n;
+
     for (let i = 0; i < n; i++)
-        fibArray.push(fibs(a));
+        fibArray.push(fib(i));
 
     return fibArray;
 }
