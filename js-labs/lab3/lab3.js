@@ -1,5 +1,9 @@
 'use strict';
 
+import {
+    fib
+  } from './functions.js';
+
 /**
  * Возвращает дробную часть числа.
  * @param {number} num - Число.
@@ -68,12 +72,9 @@ export function camelize(str) {
  * @returns {Array<BigInt>} Массив чисел Фибоначчи.
  */
 export function fibs(n) {
-    const fibArray = [];
-
-    for (let i = 0; i < n; i++)
-        fibArray.push(fib(i));
-
-    return fibArray;
+    let arr = [];
+    for (let i = 0; i < n; i++) arr.push(fib(i));
+    return arr;
 }
 
 
