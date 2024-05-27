@@ -90,3 +90,35 @@ let obj2 = {};
 
 console.log("Объект 1", isEmpty(obj1));
 console.log("Объект 2", isEmpty(obj2));
+
+
+// Задание 5
+let classObject = {
+
+    className: "open menu",
+
+    addClass(cls) {
+        let classes = this.className.split(' ');
+        if (!classes.includes(cls))
+            this.className += " " + cls;
+        
+        return this;
+    },
+
+    removeClass(cls) {
+        let classes = this.className.split(' ');
+        if (classes.includes(cls)) {
+            classes.pop(cls);
+            this.className = classes.join(' ');
+        }
+    }
+}
+
+classObject.addClass('close');
+console.log(classObject.className);
+
+classObject.addClass('open');
+console.log(classObject.className);
+
+classObject.removeClass('menu');
+console.log(classObject.className);
