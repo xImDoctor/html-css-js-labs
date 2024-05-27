@@ -142,3 +142,17 @@ function getSecondsToday() {
 }
 
 console.log("Секунд с начала дня: ", getSecondsToday());
+
+
+// Задание 8
+function formatDate(date) {
+
+    let day = date.getDate().toString().padStart(2, '0');
+    let month = (date.getMonth() + 1).toString().padStart(2, '0'); // month с 0
+    let year = date.getFullYear().toString().slice(-2);
+
+    return `${day}.${month}.${year}`;
+}
+
+let date = new Date(2024, 4, 27);
+console.log(formatDate(date));
