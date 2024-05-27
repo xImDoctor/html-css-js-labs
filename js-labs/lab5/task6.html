@@ -70,6 +70,19 @@
         </div>
     </div>
 
+    <script>
+        'use strict';
+
+        const removeButtons = document.querySelectorAll('.remove-button');
+
+        removeButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                button.parentNode.style.display = 'none';
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>
