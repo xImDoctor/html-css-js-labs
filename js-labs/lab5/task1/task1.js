@@ -3,7 +3,8 @@
 function calculatePension() {
 
     const age = document.getElementById('age').value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
+    // const gender = document.querySelector('input[name="gender"]:checked').value;
+    const genderElement = document.querySelector('input[name="gender"]:checked');
     const result = document.getElementById('result');
 
     if (age === '' || isNaN(age) || age < 0) {
@@ -11,6 +12,12 @@ function calculatePension() {
         return;
     }
 
+    if (!genderElement) {
+        result.textContent = 'Пожалуйста, выберите пол';
+        return;
+    }
+
+    const gender = genderElement.value;
     let message = '';
 
     if (age <= 17)
