@@ -101,7 +101,7 @@ let classObject = {
         let classes = this.className.split(' ');
         if (!classes.includes(cls))
             this.className += " " + cls;
-        
+
         return this;
     },
 
@@ -130,3 +130,15 @@ console.log(jsonString);
 
 let object2 = JSON.parse(jsonString);
 console.log(JSON.stringify(classObject) === JSON.stringify(object2));
+
+
+// Задание 7
+function getSecondsToday() {
+
+    let now = new Date();
+    let start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    return Math.floor((now - start) / 1000) // 'cause ms
+}
+
+console.log("Секунд с начала дня: ", getSecondsToday());
