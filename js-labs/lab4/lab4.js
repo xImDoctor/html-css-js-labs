@@ -70,3 +70,23 @@ books.sort(Book.compare);
 console.log("Книги после сортировки по году издания:");
 for (let i = 0; i < books.length; ++i)
     books[i].show();
+
+
+
+// Задание 4
+function isEmpty(_object) {
+
+    for (let key in _object)
+        return false;
+
+    if (Object.getOwnPropertySymbols(_object).length > 0)
+        return false;
+
+    return true;
+}
+
+let obj1 = { [Symbol()]: true };
+let obj2 = {};
+
+console.log("Объект 1", isEmpty(obj1));
+console.log("Объект 2", isEmpty(obj2));
