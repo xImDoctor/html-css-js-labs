@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пенсионный калькулятор</title>
+    <link  rel="stylesheet" type="text/css" href="task1.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Пенсионный калькулятор</h1>
+        <form id="pension-form">
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" min="0" required>
+
+            <label>Пол:</label>
+            <input type="radio" id="male" name="gender" value="м" required>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="ж" required>
+            <label for="female">Женский</label>
+
+            <button type="button" onclick="calculatePension()">Рассчитать</button>
+            <button type="button" onclick="clearForm()">Очистить</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script src="task1.js"></script>
+</body>
+
+</html>
