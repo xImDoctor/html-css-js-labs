@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Музыкальные жанры</title>
+    <title>Выбор музыкального жанра</title>
 </head>
 
 <body>
@@ -14,20 +14,27 @@
         <option value="Classic" selected>Классика</option>
     </select>
 
+    <div id="selected-info">
+        <p>Выбранное значение: <span id="selected-value"></span></p>
+        <p>Выбранный текст: <span id="selected-text"></span></p>
+    </div>
+
     <script>
         'use strict';
 
         const selectElement = document.getElementById('music-genre');
+        const selectedValueElement = document.getElementById('selected-value');
+        const selectedTextElement = document.getElementById('selected-text');
 
-        selectElement.addEventListener('change', function () {
+        function updateSelectedInfo() {
             const selectedOption = selectElement.options[selectElement.selectedIndex];
-            console.log('Выбранное значение:', selectedOption.value);
-            console.log('Выбранный текст:', selectedOption.text);
-        });
+            selectedValueElement.textContent = selectedOption.value;
+            selectedTextElement.textContent = selectedOption.text;
+        }
 
-        const initialSelectedOption = selectElement.options[selectElement.selectedIndex];
-        console.log('Выбранное значение:', initialSelectedOption.value);
-        console.log('Выбранный текст:', initialSelectedOption.text);
+
+        updateSelectedInfo();
+        selectElement.addEventListener('change', updateSelectedInfo);
     </script>
 
 </body>
