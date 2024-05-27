@@ -19,10 +19,11 @@
         'use strict';
 
         function createTree(container, data) {
+
             function createTreeDom(obj) {
 
                 if (!Object.keys(obj).length) 
-                return null;
+                    return null;
 
                 let ul = document.createElement('ul');
                 for (let key in obj) {
@@ -35,6 +36,7 @@
 
                     ul.appendChild(li);
                 }
+
                 return ul;
             }
 
