@@ -63,11 +63,10 @@ book2.show()
 let book3 = new Book('1984', 1949, 250);
 book3.show()
 
+
 let books = [book1, book2, book3];
 // console.log(books);
 books.sort(Book.compare);
-
 console.log("Книги после сортировки по году издания:");
 for (let i = 0; i < books.length; ++i)
     books[i].show();
-
