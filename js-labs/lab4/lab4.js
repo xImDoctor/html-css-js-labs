@@ -122,3 +122,11 @@ console.log(classObject.className);
 
 classObject.removeClass('menu');
 console.log(classObject.className);
+
+
+// Задание 6
+let jsonString = JSON.stringify(classObject, null, 2);
+console.log(jsonString);
+
+let object2 = JSON.parse(jsonString);
+console.log(JSON.stringify(classObject) === JSON.stringify(object2));
