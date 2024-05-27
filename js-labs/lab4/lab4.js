@@ -1,3 +1,5 @@
+'use strict';
+
 class Book {
     constructor(title, pubYear, price) {
         this._title = title;
@@ -39,7 +41,7 @@ class Book {
     }
 
     show() {
-        console.log(`Title: ${this._title}, Public Year: ${this._pubYear}, Price: ${this._price}`);
+        console.log(`Название: ${this._title},\nГод публикации: ${this._pubYear},\nЦена: ${this._price}`);
     }
 
     static compare(book1, book2) {
@@ -49,7 +51,23 @@ class Book {
 
 
 
-const book1 = new Book('The Great Gatsby', 1925, 15.99);
+let book1 = new Book('Game of Thrones', 1925, 2300);
+book1.show();
+book1.price = 1900;
 book1.show();
 
 console.log(book1._price);
+
+let book2 = new Book('To Kill a Mockingbird', 1960, 890);
+book2.show()
+let book3 = new Book('1984', 1949, 250);
+book3.show()
+
+let books = [book1, book2, book3];
+// console.log(books);
+books.sort(Book.compare);
+
+console.log("Книги после сортировки по году издания:");
+for (let i = 0; i < books.length; ++i)
+    books[i].show();
+
