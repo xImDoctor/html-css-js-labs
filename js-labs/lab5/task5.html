@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <div class="menu open">
+    <div class="menu open" onclick="toggleMenu(this)">
         <span class="title ">Сладости (нажми меня)!</span>
         <ul>
             <li>Торт</li>
@@ -45,6 +45,11 @@
             <li>Пирожное</li>
         </ul>
     </div>
+    <script>
+        function toggleMenu(menu) {
+            menu.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>
