@@ -11,6 +11,21 @@
 
 	<script>
         'use strict';
+
+		document.getElementById('hider').addEventListener('click', function() {
+			
+            let textElement = document.getElementById('text');
+            let button = document.getElementById('hider');
+
+            if (textElement.style.display === 'none') {
+                textElement.style.display = '';
+                button.value = 'Спрятать текст';
+            } else {
+                textElement.style.display = 'none';
+                button.value = 'Показать текст';
+            }
+        });
+
 	</script>
 </body>
 </html>
