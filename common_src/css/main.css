@@ -87,7 +87,8 @@ hr {
     color: #c7c7c7;
 }
 
-.removed {
+.removed a,
+.removed a:hover {
     text-decoration: line-through;
     color: #c7c7c7;
 }
