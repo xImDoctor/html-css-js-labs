@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактируемая таблица</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        td textarea {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        .edit-buttons {
+            margin-top: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="editable-table">
+        <tr>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+        </tr>
+        <tr>
+            <td>Клетка 1</td>
+            <td>Клетка 2</td>
+            <td>Клетка 3</td>
+        </tr>
+        <tr>
+            <td>Клетка 4</td>
+            <td>Клетка 5</td>
+            <td>Клетка 6</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById('editable-table').addEventListener('click', function (event) {
+            let target = event.target;
+
+            if (target.tagName === 'TEXTAREA') // Игнор кликов по textarea
+                return;
+            if (document.querySelector('td.editing')) // Игнор кликов, если ячейка уже редактируется
+                return;
+
+            while (target !== this) {
+                if (target.tagName === 'TD') {
+                    startEditing(target);
+                    return;
+                }
+                target = target.parentNode;
+            }
+        });
+
+        function startEditing(td) {
+            td.classList.add('editing');
+
+            // сохраняем изначальный текст, добавляя атрибут
+            let currentText = td.innerHTML;
+            td.setAttribute('original-text', currentText);
+            
+
+            td.innerHTML = `<textarea>${currentText}</textarea>
+                  <div class="edit-buttons">
+                    <button class="ok-button">OK</button>
+                    <button class="cancel-button">ОТМЕНА</button>
+                  </div>`;
+
+            td.querySelector('textarea').focus();
+
+            td.querySelector('.ok-button').addEventListener('click', function () {
+                finishEditing(td, true);
+            });
+
+            td.querySelector('.cancel-button').addEventListener('click', function () {
+                finishEditing(td, false);
+            });
+        }
+
+        function finishEditing(td, isSave) {
+            let textarea = td.querySelector('textarea');
+
+            // получаем изначальный текст, чтоб вернуть при отмене изменения
+            //let originalText = textarea.value;
+            let originalText = td.getAttribute('original-text');
+
+            if (isSave)
+                td.innerHTML = textarea.value;
+            else
+                td.innerHTML = originalText;
+
+            td.classList.remove('editing');
+        }
+    </script>
+
+</body>
+
+</html>
