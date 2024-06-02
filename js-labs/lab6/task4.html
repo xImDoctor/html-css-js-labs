@@ -38,9 +38,9 @@
 
     <table id="editable-table">
         <tr>
-            <th>Заголовок 1</th>
-            <th>Заголовок 2</th>
-            <th>Заголовок 3</th>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
         </tr>
         <tr>
             <td>Клетка 1</td>
@@ -74,7 +74,12 @@
 
         function startEditing(td) {
             td.classList.add('editing');
+
+            // сохраняем изначальный текст, добавляя атрибут
             let currentText = td.innerHTML;
+            td.setAttribute('original-text', currentText);
+            
+
             td.innerHTML = `<textarea>${currentText}</textarea>
                   <div class="edit-buttons">
                     <button class="ok-button">OK</button>
@@ -94,12 +99,15 @@
 
         function finishEditing(td, isSave) {
             let textarea = td.querySelector('textarea');
-            let originalText = textarea.value;
+
+            // получаем изначальный текст, чтоб вернуть при отмене изменения
+            //let originalText = textarea.value;
+            let originalText = td.getAttribute('original-text');
 
             if (isSave)
-                td.innerHTML = originalText;
+                td.innerHTML = textarea.value;
             else
-                td.innerHTML = textarea.innerText;
+                td.innerHTML = originalText;
 
             td.classList.remove('editing');
         }
