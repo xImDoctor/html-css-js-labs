@@ -87,3 +87,7 @@ hr {
     color: #c7c7c7;
 }
 
+.removed {
+    text-decoration: line-through;
+    color: #c7c7c7;
+}
