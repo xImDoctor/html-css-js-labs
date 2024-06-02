@@ -98,7 +98,7 @@
                 document.body.removeChild(overlay);
             }
 
-            // Переключение фокуса через таб
+            // Переключение фокуса через таб и шифт-таб (назад)
             modal.onkeydown = function (event) {
                 if (event.key === 'Tab') {
                     let focusableElements = modal.querySelectorAll('input, button');
