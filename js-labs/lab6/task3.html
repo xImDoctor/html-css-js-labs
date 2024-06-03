@@ -21,25 +21,30 @@
             if (event.ctrlKey && event.key === 'e') {
 
                 event.preventDefault();
-                textarea = document.createElement('textarea');
-                div.replaceWith(textarea);
-                textarea.focus();
-                textarea.value = div.innerHTML;
+                if (!textarea) { // check if textarea does not exist
+                    textarea = document.createElement('textarea');
+                    textarea.value = div.innerHTML;
+                    div.replaceWith(textarea);
+                    textarea.focus();
+                }
 
             }
             else if (event.ctrlKey && event.key === 's') {
                 event.preventDefault();
-                div.innerHTML = textarea.value;
-                textarea.replaceWith(div);
-                textarea = null;
+                if (textarea) {
+                    div.innerHTML = textarea.value;
+                    textarea.replaceWith(div);
+                    textarea = null;
 
-            }
-            else if (event.key === 'Escape') {
-                event.preventDefault();
-                textarea.replaceWith(div);
-                textarea = null;
-            }
-        };
+                }
+                else if (event.key === 'Escape') {
+                    if (textarea) {
+                        textarea.replaceWith(div);
+                        textarea = null;
+                    }
+                }
+            };
+        }
 
     </script>
 
