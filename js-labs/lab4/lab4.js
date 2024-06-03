@@ -107,8 +107,10 @@ let classObject = {
 
     removeClass(cls) {
         let classes = this.className.split(' ');
-        if (classes.includes(cls)) {
-            classes.pop(cls);
+        let index = classes.indexOf(cls);
+
+        if (index !== -1) {
+            classes.splice(index, 1);
             this.className = classes.join(' ');
         }
     }
@@ -129,7 +131,7 @@ let jsonString = JSON.stringify(classObject, null, 2);
 console.log(jsonString);
 
 let object2 = JSON.parse(jsonString);
-console.log(JSON.stringify(classObject) === JSON.stringify(object2));
+console.log('Сравнение объектов из JSON:', JSON.stringify(object2) === JSON.stringify(classObject));
 
 
 // Задание 7
@@ -154,5 +156,5 @@ function formatDate(date) {
     return `${day}.${month}.${year}`;
 }
 
-let date = new Date(2024, 4, 27);
+let date = new Date();
 console.log(formatDate(date));
