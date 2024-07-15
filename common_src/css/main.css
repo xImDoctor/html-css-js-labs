@@ -92,3 +92,21 @@ hr {
     text-decoration: line-through;
     color: #c7c7c7;
 }
+
+.footer-to-main {
+    margin-top: 150px;
+}
+
+.footer-to-main a{
+    text-decoration: none;
+    color: #71ffa8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+    padding-left: 200px;
+    font-size: larger;
+    font-weight:900;
+}
+
+.footer-to-main a:hover {
+    color: #4da970;
+}
